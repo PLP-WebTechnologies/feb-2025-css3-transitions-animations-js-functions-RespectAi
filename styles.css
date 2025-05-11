@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #2196f3;
+  --animation-speed: 0.5s;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+.pulse-box {
+  width: 200px;
+  height: 200px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.animate-pulse {
+  animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.control-panel {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.theme-selector {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 2px solid var(--primary-color);
+}
